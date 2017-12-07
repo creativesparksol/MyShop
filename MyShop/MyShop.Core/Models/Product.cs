@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace MyShop.Core.Models
 {
-    public class Product
+    public class Product : BaseEntity
     {
-        public string Id { get; set; }
+       // public string Id { get; set; }
 
         [StringLength(20)]
         [DisplayName("Product Name")]
@@ -24,11 +24,12 @@ namespace MyShop.Core.Models
         public string Category { get; set; }
         public string Image { get; set; }
 
-        public Product()
-        {
-            this.Id = Guid.NewGuid().ToString();
+        // commented because now BaseEntity is abstracted.
+        //public Product()
+        //{
+        //    this.Id = Guid.NewGuid().ToString();
 
-        }
+        //}
 
         
     }
